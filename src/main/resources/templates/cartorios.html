@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" th:href="@{/css/cartoriosForm.css}">
+    <title>Cadastro de Cartórios</title>
+</head>
+<body>
+<div class="container">
+    <div class="header p-2 bg-primary">
+        <h1 class="text-light text-center">Cadastro Cartório</h1>
+    </div>
+    <form th:action="@{/addCartorio}" th:object="${cartorioForm}" method="post" class="p-4 border rounded">
+        <div class="form-group">
+            <label class="text-black">Nome:</label>
+            <input type="text" th:field="*{name}" class="form-control" placeholder="Insira o Nome">
+        </div>
+
+        <div class="form-group">
+            <label for="enderecoCartorio" class="text-black">Endereço:</label>
+            <input type="text" th:name="address" th:value="${cartorioForm.address != null} ? ${cartorioForm.address} : ''"
+                   id="enderecoCartorio" class="form-control" placeholder="Insira o Endereço">
+        </div>
+
+        <div class="form-group">
+            <label for="cidadeCartorio" class="text-black">Cidade:</label>
+            <input type="text" th:name="address" th:value="${cartorioForm.city != null} ? ${cartorioForm.city} : ''"
+                   id="cidadeCartorio" class="form-control" placeholder="Insira a Cidade">
+        </div>
+
+        <div class="form-group">
+            <label for="estadoCartorio" class="text-black">Estado:</label>
+            <input type="text" th:field="*{state}"  id="estadoCartorio" class="form-control" placeholder="Insira o Estado">
+        </div>
+
+<!--        <div class="form-group">-->
+<!--            <label for="emailCartorio" class="text-black">Email:</label>-->
+<!--            <input type="email" th:field="*{mail}" id="emailCartorio" class="form-control" placeholder="Insira o Email">-->
+<!--        </div>-->
+
+        <div class="form-group">
+            <label class="text-black">Selecione as Certidões:</label>
+            <div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="box1" value="opt1">
+                    <label class="form-check-label box" for="box1">Casamento</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input  class="form-check-input" type="checkbox" id="box2" value="opt2">
+                    <label class="form-check-label box" for="box2">Nascimento</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="box3" value="opt3">
+                    <label class="form-check-label box" for="box3">Óbito</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group text-right mt-2">
+            <input type="button" id="cancel" value="Cancelar" class="btn btn-lg text-light bg-danger mr-3">
+            <input type="submit" id="submit" value="Salvar" class="btn btn-lg text-light bg-primary">
+        </div>
+    </form>
+
+</div>
+
+<script src="https://kit.fontawesome.com/c80a06083c.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script type="text/javascript" th:src="@{/js/cartoriosForm.js}"></script>
+</body>
+</html>

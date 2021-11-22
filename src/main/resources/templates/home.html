@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <title>Thymeleaf Test Page</title>
+</head>
+<body>
+<div class="container mb-5 mt-3">
+            <button id="add-cartorio" class="btn btn-primary mb-4" >Add Cartório</button>
+            <table class="table table-striped table-bordered" style="min-width: 100%" id="usersTable">
+                <thead>
+                <tr>
+                    <th>Cartórios</th>
+                    <th>Estado</th>
+                    <th>Cidade</th>
+                    <th>Certidão de Casamento</th>
+                    <th>Certidão de Nascimento</th>
+                    <th>Certidão de Óbito</th>
+                    <th>Ajustes</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><span>Mariana Inventario</span>
+                        <button class="btn btn-sm btn-info">Info</button>
+                    </td>
+                    <td>Minas Gerais</td>
+                    <td>Itabira</td>
+                    <td>2ª via Casamento</td>
+                    <td>2ª via Nascimento</td>
+                    <td>2ª via Óbito</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning">Atualizar</button>
+                        <button class="btn btn-sm btn-danger">Remover</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span>Izabella Doc</span>
+                        <button class="float-right btn btn-sm btn-info">Info</button>
+                    </td>
+                    <td>São Paulo</td>
+                    <td>Campinas</td>
+                    <td>2ª via Casamento</td>
+                    <td>2ª via Nascimento</td>
+                    <td>2ª via Óbito</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning">Atualizar</button>
+                        <button class="btn btn-sm btn-danger">Remover</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span>Denilza Vias</span>
+                        <button class="btn btn-sm btn-info float-right">Info</button>
+                    </td>
+                    <td>Minas Gerais</td>
+                    <td>Belo Horizonte</td>
+                    <td>2ª via Casamento</td>
+                    <td>2ª via Nascimento</td>
+                    <td>2ª via Óbito</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning">Atualizar</button>
+                        <button class="btn btn-sm btn-danger">Remover</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span>Bruna Fonte</span>
+                        <button class="btn btn-sm btn-info float-right">Info</button>
+                    </td>
+                    <td>Rio de Janeiro</td>
+                    <td>Rio de Janeiro</td>
+                    <td>2ª via Casamento</td>
+                    <td>2ª via Nascimento</td>
+                    <td class="text-center align-middle"><i class="text-danger far fa-times-circle fa-lg"></i></td>
+                    <td>
+                        <button class="btn btn-sm btn-warning">Atualizar</button>
+                        <button class="btn btn-sm btn-danger">Remover</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span>Denis Alvaras</span>
+                        <button class="btn btn-sm btn-info float-right">Info</button>
+                    </td>
+                    <td>São Paulo</td>
+                    <td>São Caetano</td>
+                    <td>2ª via Casamento</td>
+                     <td class="text-center align-middle"><i class="text-danger far fa-times-circle fa-lg"></i></td>
+                    <td>2ª via Óbito</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning">Atualizar</button>
+                        <button class="btn  btn-sm btn-danger">Remover</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span>Rafael Divorcio</span>
+                        <button class="btn btn-sm btn-info float-right">Info</button>
+                    </td>
+                    <td>Mato Grosso do Sul</td>
+                    <td>Campo Grande</td>
+                    <td class="text-center align-middle"><i class="text-danger far fa-times-circle fa-lg"></i></td>
+                    <td>2ª via Nascimento</td>
+                    <td>2ª via Óbito</td>
+                    <td>
+                        <button class="btn-sm btn-warning btn">Atualizar</button>
+                        <button class="btn-sm btn btn-danger">Remover</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+</div>
+<script src="https://kit.fontawesome.com/c80a06083c.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript" th:src="@{/js/main.js}"></script>
+</body>
+</html>

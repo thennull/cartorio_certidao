@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100%;
+    box-sizing: border-box;
+}
+
+#usersTable_wrapper {
+    min-width: 1280px;
+}
+
+td {
+    white-space: nowrap;
+}
